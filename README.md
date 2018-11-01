@@ -1,4 +1,4 @@
-# summon
+# summon scripts
 generate project structure, submodule and new files for cmake projects
 
 ## summon.py [classname]
