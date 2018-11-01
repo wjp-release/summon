@@ -1,4 +1,4 @@
-#!/opt/local/bin/python3
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
 import os, sys, stat

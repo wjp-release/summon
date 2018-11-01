@@ -53,14 +53,17 @@ def append_str(filename, str):
         fd.write(str)
     return
 
-append_str_="""
+def module_summon(module_name, libstr):
+    append_str_="""
 link_directories(./{module}/)
 include_directories(./{module}/)
 add_subdirectory({module})
-""".format(module=module_name_)
+    """.format(module=module_name)
+    create_dir(module_name)
+    cmakelists_str=gen_cmakelists_txt(module_name, libstr)
+    write_str("./"+module_name+"/CMakeLists.txt", cmakelists_str)
+    append_str("./CMakeLists.txt", append_str_)
+    return
 
-create_dir(module_name_)
-cmakelists_str=gen_cmakelists_txt(module_name_, libs_str_)
-write_str("./"+module_name_+"/CMakeLists.txt", cmakelists_str)
-append_str("./CMakeLists.txt", append_str_)
 
+module_summon(module_name_, libs_str_)
