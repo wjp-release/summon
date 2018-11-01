@@ -29,27 +29,22 @@
 
 namespace hmq{
 
-class www{
+class foobar{
 public:
-    www();
-
-    www(const www d) : meta(d.meta){}
-
-    www& operator= (www&&d) noexcept : meta(d.meta){
+    foobar();
+    foobar(const foobar d) : meta(d.meta){}
+    foobar& operator= (foobar&&d) noexcept : meta(d.meta){
         meta.swap(d.meta);
         return *this;
     }
-
-    www& operator= (const www& d) noexcept{
+    foobar& operator= (const foobar& d) noexcept{
         meta=d.meta;
         return *this;
     }
-
-    bool operator== (const www& d) noexcept{
+    bool operator== (const foobar& d) noexcept{
         return meta.get()==d.meta.get();
     }
-
-    bool operator!= (const www& d) const noexcept{
+    bool operator!= (const foobar& d) const noexcept{
         return !(*this==d);
     }
 
