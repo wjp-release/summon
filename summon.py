@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/opt/local/bin/python3
 # -*- coding: UTF-8 -*-
 
 import sys
@@ -7,7 +7,7 @@ script_path_ = sys.argv[0]
 classname_ = sys.argv[1]
 encoding_ = 'utf-8'
 namespace_ = 'hmq'
-common_header_ = "internal.h"
+common_header_ = '"internal.h"'
 
 print('class %s summoned in the name of %s in %s\n' % (classname_, namespace_, encoding_)) 
 
@@ -54,7 +54,7 @@ private:
 
 }
 
-""" % (classname, namespace_)
+""" % (common_header_, namespace_, classname, classname)
     return str
 
 
