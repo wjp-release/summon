@@ -1,5 +1,5 @@
 # summon
-python scripts that generate files/dirs in cpp cmake projects
+generate project structure, submodule and new files for cmake projects
 
 > summon.py <classname>
     create .cc and .h files for specified class, which initially include copy right info, the liscence, a common header, #pragma once, namespace and empty class structures
