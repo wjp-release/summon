@@ -48,7 +48,7 @@ class {foo}{{
 public:
     {foo}();
     {foo}(const {foo}& d) : meta(d.meta){{}}
-    {foo}& operator= ({foo}&&d) noexcept : meta(d.meta){{
+    {foo}& operator= ({foo}&&d) noexcept{{
         meta.swap(d.meta);
         return *this;
     }}
